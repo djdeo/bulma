@@ -144,7 +144,7 @@ $content-kbd-font-family: Consolas, "Lucida Console", monospace !default
           th
             border-bottom-width: 0
 
-    kbd 
+kbd 
       font-family: $content-kbd-font-family
       display: inline-block
       border-radius: 3px
@@ -152,20 +152,14 @@ $content-kbd-font-family: Consolas, "Lucida Console", monospace !default
       box-shadow: 1px 1px 1px #777
       margin: 2px
       font-size: small
-      vertical-align: text-bottom
+      vertical-align: baseline
       background: #eee
-      font-weight: 500
-      color: $content-kbd-text-color
-      cursor: pointer
-      font-variant: small-caps
       font-weight: 600
+      color: $content-kbd-text-color
+      font-variant: initial
       letter-spacing: 1px
       &:hover 
         color: $content-kbd-dark-color
-      
-      &:active 
-        color: $content-kbd-dark-color
-        box-shadow: 1px 1px 0px #ddd inset
         kbd 
           box-shadow: $content-kbd-box-shadow
           background: none
@@ -176,17 +170,8 @@ $content-kbd-font-family: Consolas, "Lucida Console", monospace !default
         box-shadow: $content-kbd-box-shadow
         vertical-align: baseline
         background: none
-        &:hover 
-          box-shadow: $content-kbd-box-shadow
-    // keyboard dark theme
-    kbd.dark 
-      background: $content-kbd-dark-color
-      color: $content-kbd-dark-text-color
-      &:hover 
-        color: $content-kbd-dark-hover-color
-    .dark 
-      kbd 
-        @extend kbd.dark
+
+
 
         
   // Sizes
