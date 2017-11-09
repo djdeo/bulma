@@ -18,9 +18,10 @@ $content-table-head-cell-color: $text-strong !default
 $content-table-foot-cell-border-width: 2px 0 0 !default
 $content-table-foot-cell-color: $text-strong !default
 
-$kbd-text-color: #555 !default
-$kbd-box-shadow: 0px 0px 0px black !default
-$kbd-font-family: Consolas, "Lucida Console", monospace !default
+$kbd-background-color: $white !default
+$kbd-box-shadow:0.175em 0.175em 0.5em 0 hsl(0, 0%, 67%) !default
+$kbd-text-color: $black !default
+$kbd-text-font: Lucida Sans Unicode,Lucida Grande,sans-serif !default
 
 .content
   +block
@@ -141,35 +142,6 @@ $kbd-font-family: Consolas, "Lucida Console", monospace !default
           th
             border-bottom-width: 0
 
-kbd 
-      font-family: $kbd-font-family
-      display: inline-block
-      border-radius: 3px
-      padding: 0px 4px
-      box-shadow: 1px 1px 1px #777
-      margin: 2px
-      font-size: $size-small
-      vertical-align: baseline
-      background: #eee
-      font-weight: 600
-      color: $kbd-text-color
-      font-variant: initial
-      letter-spacing: 1px
-      &:hover 
-        color: $kbd-dark-color
-        kbd 
-          box-shadow: $kbd-box-shadow
-          background: none
-      //keyboard combination
-      kbd 
-        padding: 0px
-        margin: 0 1px
-        box-shadow: $kbd-box-shadow
-        vertical-align: baseline
-        background: none
-
-
-
         
   // Sizes
   &.is-small
@@ -178,3 +150,14 @@ kbd
     font-size: $size-medium
   &.is-large
     font-size: $size-large
+
+kbd
+  font-family: $kbd-text-font
+  background: $kbd-background-color
+  color: $kbd-text-color
+  -webkit-box-shadow: $kbd-box-shadow
+  box-shadow: $kbd-box-shadow
+  display: inline-block
+  border-radius: 0.2em
+  padding: 0em 1em
+  margin: 0 0.25em
